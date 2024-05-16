@@ -1,4 +1,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  push,
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCoS0ipK_rOm0ZSeB5d_ehhVBJTq6o2_RE",
@@ -12,3 +17,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const databse = getDatabase(app);
+const NotesInDB = ref(databse, "Notes");
+
+push(NotesInDB, "Hello");
