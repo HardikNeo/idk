@@ -17,3 +17,6 @@ const databse = getDatabase(app);
 const NotesInDB = ref(databse, "Notes");
 
 set(NotesInDB, "Hello");
+const textArea = document.getElementById("notes");
+const saveBtn = document.getElementById("save");
+const loadBtn = document.getElementById("load");
